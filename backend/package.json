@@ -1,0 +1,24 @@
+{
+  "name": "assignment3",
+  "version": "1.0.0",
+  "description": "Assignment 3",
+  "main": "frontend/src/fakestore.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon backend/CRUD.js"
+  },
+  "keywords": [
+    "Nodejs",
+    "express"
+  ],
+  "author": "Eitan Tuchin",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongodb": "6.5",
+    "nodemon": "^3.1.0"
+  }
+}
