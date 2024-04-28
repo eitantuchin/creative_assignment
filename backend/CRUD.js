@@ -17,12 +17,12 @@ app.listen(port, () => {
     console.log("App listening at http://%s:%s", host, port);
 });
 
-app.get("/listCatalog", async (req, res) => {
+app.get("/showDinos", async (req, res) => {
     await client.connect();
     console.log("Node connected successfully to GET MongoDB");
     const query = {};
     const results = await db
-        .collection("fakestore_catalog")
+        .collection("jurassic_animals")
         .find(query)
         .limit(100)
         .toArray();
@@ -31,13 +31,13 @@ app.get("/listCatalog", async (req, res) => {
     res.send(results);
 });
 
-app.get("/:id", async (req, res) => {
+app.get("/showDinos/:name", async (req, res) => {
     const itemId = Number(req.params.id);
-    console.log("Item to find:", itemId);
+    console.log("Dino to find:", itemId);
     await client.connect();
     console.log("Node connected successfully to GET-id MongoDB");
     const query = { "id": itemId };
-    const results = await db.collection("fakestore_catalog")
+    const results = await db.collection("jurassic_animals")
         .findOne(query);
     console.log("Results :", results);
     if (!results) res.send("Not Found").status(404);
