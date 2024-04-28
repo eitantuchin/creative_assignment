@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client';
 import Navbar from './navbar';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import AddProductView from './addProduct';
-import DeleteProductView from './deleteProduct';
-import UpdateProductView from './updateProduct';
-import StudentInfo from './studentInfo';
-import Store from './fakestore';
+import Tectonics from './tectonics';
+import Biosphere from './biosphere';
+import Atmosphere from './atmosphere';
+import Temperature from './temperature';
+import Jurassic from './jurassic';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,11 +16,11 @@ root.render(
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/store" element={<Store />} />
-        <Route path="/create-product" element={<AddProductView />} />
-        <Route path="/update-product" element={<UpdateProductView />} />
-        <Route path="/delete-product" element={<DeleteProductView />} />
-        <Route path="/student-info" element={<StudentInfo />} />
+        <Route path="/jurassic" element={<Jurassic />} />
+        <Route path="/tectonics" element={<Tectonics />} />
+        <Route path="/biosphere" element={<Biosphere />} />
+        <Route path="/atmosphere" element={<Atmosphere />} />
+        <Route path="/temperature" element={<Temperature />} />
       </Routes>
     </Router>
   </React.StrictMode>

@@ -2,7 +2,7 @@
   "name": "creative_assignment",
   "version": "1.0.0",
   "description": "creative_assignment",
-  "main": "frontend/src/fakestore.js",
+  "main": "frontend/src/jurassic.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon backend/CRUD.js"
