@@ -8,7 +8,7 @@ function Jurassic() {
       <header className="mt-3 mb-5">
         <h1>Welcome to The Jurassic</h1>
         <p className="lead">This website aims to explore various aspects of the Jurassic period, including its atmosphere, 
-        biosphere, temperature, and tectonics.</p>
+        biosphere, temperature, and tectonics from the perspective of a time traveler.</p>
       </header>
       <section className="mb-5">
       <h2>General Description of the Jurassic Period</h2>
