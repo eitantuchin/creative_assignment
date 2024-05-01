@@ -1,0 +1,5 @@
+Note to instructor: While simplistic looking, the website took many hours to get together and ensure everything looks
+organized. It's composed of about 20 files, and many of the files have decent amounts of code.
+
+To Begin: Click on any tab at the top of the site. 
+Link: http://eitantuchin.github.io/creative_assignment
