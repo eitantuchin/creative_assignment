@@ -1,31 +1,16 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
+import dinosaurData from './dinosaurs.json'; // Import JSON data
 
 function DinosaurForm() {
   const [selectedDinosaur, setSelectedDinosaur] = useState('');
   const [dinosaurInfo, setDinosaurInfo] = useState(null);
 
-  useEffect(() => {
-    const fetchDinosaurInfo = async () => {
-      if (selectedDinosaur) {
-        try {
-          const response = await fetch(`http://localhost:8081/showDinos/${selectedDinosaur}`);
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          const data = await response.json();
-          setDinosaurInfo(data);
-        } catch (error) {
-          console.error('Error fetching dinosaur info:', error);
-          setDinosaurInfo(null);
-        }
-      }
-    };
-
-    fetchDinosaurInfo();
-  }, [selectedDinosaur]);
-
   const handleChange = (event) => {
     setSelectedDinosaur(event.target.value);
+    // Find the selected dinosaur info from the JSON data
+    const selectedDinosaurInfo = dinosaurData.find(dinosaur => dinosaur.name === event.target.value);
+    setDinosaurInfo(selectedDinosaurInfo);
   };
 
   const renderDinosaurCard = () => {
@@ -37,7 +22,7 @@ function DinosaurForm() {
           src={dinosaurInfo.image}
           className="card-img-top dino-image"
           alt={dinosaurInfo.name}
-          style={{ width: '50%', height: '50%' }} 
+          style={{ width: '50%', height: '50%' }}
         />
         <div className="card-body">
           <h5 className="card-title">{dinosaurInfo.name}</h5>
@@ -58,30 +43,22 @@ function DinosaurForm() {
   };
 
   return (
-    
     <div className="container mt-5">
-       <form>
+
+      
+      <form>
         <div className="form-group">
           <h2 htmlFor="dinosaurSelect"><b>Select a Jurassic Animal to Learn About:</b></h2>
           <select className="form-control" id="dinosaurSelect" onChange={handleChange}>
             <option value="">Select...</option>
-            <option value="Tyrannosaurus rex">Tyrannosaurus rex</option>
-            <option value="Stegosaurus">Stegosaurus</option>
-            <option value="Brachiosaurus">Brachiosaurus</option>
-            <option value="Allosaurus">Allosaurus</option>
-            <option value="Diplodocus">Diplodocus</option>
-            <option value="Archaeopteryx">Archaeopteryx</option>
-            <option value="Dunkleosteus">Dunkleosteus</option>
-            <option value="Pteranodon">Pteranodon</option>
-            <option value="Mosasaurus">Mosasaurus</option>
-            <option value="Ichthyosaurus">Ichthyosaurus</option>
+            {dinosaurData.map(dinosaur => (
+              <option key={dinosaur.name} value={dinosaur.name}>{dinosaur.name}</option>
+            ))}
           </select>
         </div>
       </form>
       {renderDinosaurCard()}
-        <header className="mt-3 mb-5">
-        <h1>Jurassic Biosphere</h1>
-      </header>
+      
       <section className="mb-5">
         <h2>Observations as a Time Traveler</h2>
         <p>
@@ -106,9 +83,10 @@ function DinosaurForm() {
           As a time traveler witnessing the Jurassic biosphere firsthand, I am awestruck by the complexity and diversity of life on Earth during this ancient era. It is a testament to the resilience and adaptability of life in the face of ever-changing environmental conditions.
         </p>
       </section>
-      
     </div>
   );
 }
 
 export default DinosaurForm;
+
+
