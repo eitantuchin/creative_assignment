@@ -1,0 +1,10 @@
+/* Temperature.css */
+  li {
+    margin-bottom: 10px; /* Spacing between answer options */
+    cursor: pointer;
+  }
+  
+  li:hover {
+    color: #0de214; /* Green color when hovered over */
+  }
+  
