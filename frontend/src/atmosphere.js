@@ -30,7 +30,6 @@ function Atmosphere() {
           However, the elevated levels of greenhouse gases in the atmosphere contribute to climate instability and environmental challenges. Frequent storms, fluctuations in sea levels, and changes in precipitation patterns shape the Jurassic landscape, driving adaptation and evolution among species.
         </p>
       </section>
-      <img src="https://cdn.mos.cms.futurecdn.net/MbLNMBasaXMzmjhuWnnWG8-1200-80.jpg" alt="Jurassic Image" className="img-fluid" style={{ width: '50%', height: '50%'}} />
       
     </div>
   );

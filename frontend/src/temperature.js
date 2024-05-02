@@ -24,7 +24,7 @@ function Temperature() {
           The warm temperatures of the Jurassic period have profound implications for life on Earth. They provide the ideal conditions for the proliferation of diverse flora and fauna, including the iconic dinosaurs that roam the land.
         </p>
         <p>
-          The warm climate supports the growth of lush vegetation, which in turn sustains large herbivorous dinosaurs. These herbivores form the foundation of the Jurassic ecosystem, supporting a complex food web that includes apex predators like the mighty Tyrannosaurus rex.
+          The warm climate supports the growth of lush vegetation, which in turn sustains large herbivorous dinosaurs. These herbivores form the foundation of the Jurassic ecosystem, supporting a complex food web that includes apex predators like the mighty Allosaurus.
         </p>
         <p>
           However, the warm temperatures of the Jurassic period also contribute to high levels of evaporation and precipitation, leading to frequent storms and fluctuations in sea levels. These environmental challenges shape the evolution of life during this time, driving adaptation and innovation among species.

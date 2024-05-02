@@ -1,0 +1,49 @@
+/* Jurassic.css */
+
+/* Styles for header */
+h1 {
+    color: #FF5733; /* Orange color for heading */
+  }
+  
+  .lead {
+    color: #95d5a0; /* Green color for lead paragraph */
+  }
+  
+  /* Styles for section with description */
+  p {
+    color: #333; /* Dark gray color for paragraphs */
+  }
+  
+  /* Styles for image */
+  .img-fluid {
+    border-radius: 10px; /* Rounded corners for image */
+  }
+  
+  /* Styles for student info section */
+  h2 {
+    color: #0048ff; /* Yellow color for section headings */
+  }
+  body {
+    background: linear-gradient(45deg, #FF5733, #4CAF50); /* Gradient from orange to green */
+    color: white; /* White text color for better contrast */
+  }
+  .navbar {
+    background-color: #333; /* Background color for the navbar */
+  }
+  
+  .navbar-brand {
+    color: rgb(179, 44, 44); /* Text color for the navbar brand */
+  }
+  
+  .navbar-nav .nav-link {
+    color: rgb(82, 41, 41); /* Text color for the navbar links */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #FF5733; /* Text color for the navbar links on hover */
+  }
+
+  .navbar-brand .nav-link:hover {
+    background-color: rgb(30, 170, 88); /* Background color for the navbar */
+  }
+
